@@ -1,0 +1,31 @@
+Hallo liebe Studierende,
+
+herzlich willkommen zur Übung zum Kurs Programmieren 2.
+
+Mein Name ist Marvin Krüger, ich studiere Angewandte Informatik im 3. Semester und werde eure Pflichtübungen kontrollieren und entsprechend bewerten.
+
+Zur Abgabe der Übungen:
+
+- Falls die Lösung aus mehreren Dateien besteht, ist diese als zip-Archiv hochzuladen. Bitte keine .rar Dateien!
+
+- Schriftliche Ausarbeitungen als PDF.
+
+- In jeder Quellcode-Datei soll durch einen entsprechenden Kommentar mit Name/Matrikelnummer ersichtlich sein von wem sie geschrieben wurde.
+
+- Bitte nur .java Dateien hochladen, keine .class Dateien
+
+- Das Programm soll fehlerfrei bei mir kompilieren, d.h. falls ihr Packages oder externe Bibliotheken verwendet, müssen diese in der Abgabe enthalten sein.
+
+- Ich würde es sehr begrüßen wenn ihr euch an die Bezeichnungen der Klassen/Methoden aus der Aufgabenstellung haltet, denn es erleichtert mir das Kontrollieren. Sofern es nicht explizit in der Aufgabe beschrieben steht, ist es aber natürlich keine Pflicht.
+
+-Auch eine einheitliche und Java-Konvention konforme Formatierung des Quelltextes ist wünschenswert 
+
+—> http://www.oracle.com/technetwork/java/codeconventions-150003.pdf
+
+-Gruppenarbeiten in Zweiergruppen sind prinzipiell erlaubt. Bei einer Gruppenarbeit bitte im Kommentar der Dateien immer beide Namen angeben.
+
+Falls ihr Fragen, Kritik oder Anregungen bezüglich eurer Bewertung habt, so scheut euch bitte nicht, mich per E-Mail unter marvin.krueger@student.htw-berlin.de zu kontaktieren.
+
+Ich wünsche euch viel Spaß und Erfolg bei den Übungen, sowie einen guten Semesterstart.
+
+Mit freundlichen Grüßen Marvin Krüger
