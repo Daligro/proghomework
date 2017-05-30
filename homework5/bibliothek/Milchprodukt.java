@@ -6,10 +6,11 @@ public class Milchprodukt extends Toilettenpapier
 	private int[] verfallsdatum;
 	private int lagertemperatur;
 	
-	public Milchprodukt(String typ, String Verfallsdatum, int lagertemperatur)
+	public Milchprodukt(String name, double preis, int menge, String typ, String verfallsdatum, int lagertemperatur)
 	{
-		super();
-		setVerfallsdatum(Verfallsdatum);
+		super(preis, menge ,typ);
+		setName(name);
+		setVerfallsdatum(verfallsdatum);
 		setLagertemperatur(lagertemperatur);
 	}
 	
@@ -17,8 +18,7 @@ public class Milchprodukt extends Toilettenpapier
 	{
 		System.out.println("Achtung Defaultkonstruktor verwendet!");
 	}
-	
-	
+		
 	public int[] getVerfallsdatum() 
 	{	
 		return verfallsdatum;
@@ -26,11 +26,11 @@ public class Milchprodukt extends Toilettenpapier
 	
 	public void setVerfallsdatum(String verfallsdatum) 
 	{
-		String[] temp=verfallsdatum.split(".");
-		int[] verfall = {3};
+		String[] temp=verfallsdatum.split("\\.");
+		int[] verfall = new int[3];
 		verfall[0]=Integer.parseInt(temp[0]);
-		verfall[0]=Integer.parseInt(temp[1]);
-		verfall[0]=Integer.parseInt(temp[2]);
+		verfall[1]=Integer.parseInt(temp[1]);
+		verfall[2]=Integer.parseInt(temp[2]);
 		this.verfallsdatum = verfall;
 	}
 	

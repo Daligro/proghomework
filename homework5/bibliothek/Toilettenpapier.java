@@ -4,11 +4,14 @@ public class Toilettenpapier extends Warensorte
 {
 	
 	private String typ;
+	private String name;
 
 
-	public Toilettenpapier(String typ)
+	public Toilettenpapier(double preis, int menge, String typ)
 	{
+		super(preis, menge);
 		setTyp(typ);
+		setName("Toilettenpapier");
 	}
 	
 	public Toilettenpapier()

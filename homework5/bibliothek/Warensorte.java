@@ -3,13 +3,12 @@ package bibliothek;
 public class Warensorte 
 {
 	private double preis;
-	private String name;
+	private String name="Warensorte";
 	private int menge;
 	
 	
-	public Warensorte(String name, double preis, int menge)
+	public Warensorte(double preis, int menge)
 	{
-		this.name=name;
 		this.preis=preis;
 		this.menge=menge;
 	}
@@ -27,7 +26,6 @@ public class Warensorte
 		this.name = name;
 	}
 
-
 	public int getMenge() {
 		return menge;
 	}
@@ -36,17 +34,18 @@ public class Warensorte
 		this.menge = menge;
 	}
 	
-	
 	public double getPreis() {
 		return preis;
 	}
+	
 
 	public void setPreis(double preis) {
 		this.preis = preis;
 	}
 	
+	
 	public String toString()
 	{
-		return "Bezeichnung: "+getName()+"Anzahl: "+getMenge()+"Preis/Stück: "+getPreis();
+		return "Bezeichnung: "+getName()+" Anzahl: "+getMenge()+" Preis/Stück: "+getPreis();
 	}
 }
