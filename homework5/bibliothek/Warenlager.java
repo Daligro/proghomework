@@ -1,5 +1,7 @@
 package bibliothek;
 
+import java.util.Arrays;
+
 public class Warenlager 
 {
 	
@@ -75,13 +77,16 @@ public class Warenlager
 		date[2]=Integer.parseInt(temp[2]);
 		for(int i = 0 ; i<maxSorten ; i++)
 		{
-			if(date.equals(waren[i]))
+			if(waren[i] instanceof Milchprodukt)
 			{
-				System.out.println("Milchprodukt "+waren[i].getName()+" ID "+i+"ist überschritten.");
-				counter++;
+				if(Arrays.equals(date, ((Milchprodukt) waren[i]).getVerfallsdatum()))
+				{
+					System.out.println("Milchprodukt "+waren[i].getName()+" ID "+i+" ist überschritten.");
+					counter++;
+				}
 			}
 		}
-		System.out.println("Am "+dateStr+" laufen "+counter+" Produktsorten ab.\n");
+		System.out.println("\nAm "+dateStr+" laufen "+counter+" Produktsorten ab.\n");
 	}
 	
 	public void temperaturCheck(double grad)

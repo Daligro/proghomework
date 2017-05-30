@@ -15,14 +15,14 @@ public class Testlager
 		Toilettenpapier klo1 = new Toilettenpapier(1.5,19,"extra-rau");
 
 		lagerTest.add(milch1);
-		lagerTest.add(milch2);
+		//lagerTest.add(milch2);				//TODO WTF
 		lagerTest.add(milch3);
 		lagerTest.add(milch4);
 		lagerTest.add(milch5);
 		lagerTest.add(milch6);
 		lagerTest.add(klo1);
 		
-		System.out.println(lagerTest.toString());
+		System.out.print(lagerTest.toString());
 		
 		lagerTest.datumCheck("24.5.2017");
 		lagerTest.datumCheck("30.7.2017");
