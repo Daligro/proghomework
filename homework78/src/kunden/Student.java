@@ -13,6 +13,10 @@ public class Student extends Privatperson
 		super(vorname, nachname);
 		this.hochschulName = hochschulName;
 	}
+	public Student()
+	{
+		System.out.println("Achtung, st. Konstruktor!");
+	}
 
 	public String toString()
 	{

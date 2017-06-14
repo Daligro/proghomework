@@ -21,10 +21,17 @@ public class TuiReisen implements Reiseanbieter
 		bahnBuchung=new Kunde[bahn.getAnzahlPlaetze()];
 		busBuchung=new Kunde[bus.getAnzahlPlaetze()];
 	}
+	
+	public TuiReisen()
+	{
+		System.out.println("Achtung, st. Konstruktor!");
+	}
 
 	@Override
 	public boolean buchen(Kunde k, int transport) 
 	{
+		//wird für das gewünschte transportmittel EGAL angegeben, wird zunächste geguckt ob im Bus ein Platz frei ist, wenn nein dann wird danach in der Bahn nach einem PLatz gesucht
+		//wird Bus oder Bahn angegeben wird nur für das jeweilige gesucht
 		switch(transport)
 		{
 		case 0:
@@ -32,6 +39,7 @@ public class TuiReisen implements Reiseanbieter
 			{
 				if(busBuchung[i]==null)
 				{
+					//wenn ein Platz frei ist, wird der kunde k auf diesen Platz gebucht und eine Bestätigung wird an den Kunden über die Methode buchungBestaetigen abgeschickt
 					busBuchung[i]=k;
 					buchungBestaetigen(k,transport);
 					return true;
@@ -45,8 +53,9 @@ public class TuiReisen implements Reiseanbieter
 					buchungBestaetigen(k,transport);
 					return true;
 				}
-			}
-			buchungAblehnen(k,0);			
+			}//wenn nirgendswo ein Platz gefunden wurde, wird an den Kundung per buchungAblehnen eine Absage verschickt
+			buchungAblehnen(k,0);
+			return false;
 		case 1:
 			for(int i=0 ; i<busBuchung.length ; i++)
 			{
@@ -72,6 +81,7 @@ public class TuiReisen implements Reiseanbieter
 			buchungAblehnen(k,transport);
 			return false;
 			
+			//wenn das Angegebene Transportmittel nicht den wert 0-2 hatte, hat der Kunde eine Falsche eingabe gemacht und erhält direkt die passende Meldung
 			default: 
 				k.empfangeNachricht("Transportmittel existiert nicht.");
 				return false;
@@ -82,6 +92,9 @@ public class TuiReisen implements Reiseanbieter
 	public boolean buchen(Kunde[] gruppe, int transport) 	
 	{
 		int n = 0;
+		//wenn für transport EGAL angegeben wurde, wird zunächst gesucht ob im Bus genügend Plätze für die gesamte Reisegruppe sind,
+		//wenn ja wird jeder Platz gebucht, wenn nein dann wird geguckt ob im Zug genug PLatz ist
+		//wenn für transport BAHN oder BUS angegeben wird, dann wird nur für das jeweilige gesucht
 		switch(transport)
 		{
 		case 0:
@@ -221,6 +234,8 @@ public class TuiReisen implements Reiseanbieter
 	@Override
 	public boolean stornieren(Kunde k, int transport) 
 	{
+		//wenn für transport EGAL angegeben wurde wird der Kunde aufgefordert anzugeben welches Transportmittel er zuvor gebucht hat
+		//wenn BUS oder BAHN angegeben wurde, wird der Kunde im demenstrpechenden Kundenarray gesucht und wenn er gefunden wird daraus gelöscht
 		switch(transport){
 		case 0:
 			k.empfangeNachricht("Geben sie an, welches Transportmittel sie gebucht haben.");
@@ -258,6 +273,8 @@ public class TuiReisen implements Reiseanbieter
 	public boolean stornieren(Kunde[] gruppe, int transport) 
 	{
 		int counter=0;
+		//wenn als transport EGAL angegeben wurde, wird die Reisegruppe aufgefordert ein Transportmittel anzugeben
+		//wenn BUS oder BAHN angegeben wurde, wird zunächst geguckt ob sich die gesamte Reisegruppe in dem dementsprechenden Kundenarray befindet und wenn ja dann werden alle mitglieder der Gruppe gelöscht
 		switch(transport){
 		case 0:
 			for(int t=0 ; t<gruppe.length ; t++)
@@ -378,8 +395,7 @@ public class TuiReisen implements Reiseanbieter
 				{
 					k.empfangeNachricht("Am günstigsten ist die Bahnreise und kostet "+BAHNKOSTEN+" EUR.");
 					return BAHNKOSTEN;
-				}
-				else
+				}else
 				{
 					k.empfangeNachricht("Beide Verkehrsmittel kosten "+BUSKOSTEN+" EUR.");
 					return BUSKOSTEN;
@@ -396,6 +412,7 @@ public class TuiReisen implements Reiseanbieter
 	@Override
 	public double dauerErfragen(Kunde k, int transport) 
 	{
+		//die Dauer der Fahrten ergibt sich aus den jeweiligen Fahrstrecken dividiert durch die jeweiligen Geschwindigkeiten der Fahrzeuge
 		double dauerBus=STRECKEBUS/bus.getGeschwindigkeit();
 		double dauerBahn=STRECKEBAHN/bahn.getGeschwindigkeit();
 		
@@ -428,64 +445,5 @@ public class TuiReisen implements Reiseanbieter
 		
 	}
 
-	@Override
-	public boolean buchen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean buchen(Kunde[] gruppe, int transport) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void buchungBestaetigen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void buchungAblehnen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean stornieren(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean stornieren(Kunde[] gruppe, int transport) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void stornoBestaetigen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void stornoAblehnen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public double preisErfragen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public double dauerErfragen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }
+	

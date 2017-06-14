@@ -7,6 +7,7 @@ import transportmittel.Bus;
 
 /**
  * Klasse zum durchführen von Ad-Hoc Tests
+ * (stellt den Beispiel Test vom Aufgabenblatt nach)
  * @author David Linke s0558521
  */
 

@@ -17,6 +17,10 @@ public class Bahn implements Transportmittel
 		this.geschwindigkeit = geschwindigkeit;
 		this.anzahlPlaetze = anzahlPlaetze;
 	}
+	public Bahn()
+	{
+		System.out.println("Achtung, st. Konstruktor!");
+	}
 
 	@Override
 	public double getGeschwindigkeit() {

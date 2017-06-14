@@ -10,13 +10,15 @@ public class Bus implements Transportmittel
 {
 
 	private double geschwindigkeit;
-	private int anzahlPlaetze;
-	
-	
+	private int anzahlPlaetze;	
 	
 	public Bus(double geschwindigkeit, int anzahlPlaetze) {
 		this.geschwindigkeit = geschwindigkeit;
 		this.anzahlPlaetze = anzahlPlaetze;
+	}
+	public Bus()
+	{
+		System.out.println("Achtung, st. Konstruktor!");
 	}
 
 	@Override
