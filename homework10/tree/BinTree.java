@@ -14,8 +14,8 @@ public class BinTree
 	}
 	
 	/**
-	 * überprüft, ob der Binärbaum leer ist indem er guckt ob die Wurzel leer ist
-	 * @return true, wenn der Binärbaum leer ist
+	 * Ã¼berprÃ¼ft, ob der BinÃ¤rbaum leer ist indem er guckt ob die Wurzel leer ist
+	 * @return true, wenn der BinÃ¤rbaum leer ist
 	 */
 	public boolean isEmpty()
 	{
@@ -26,9 +26,9 @@ public class BinTree
 	}
 	
 	/**
-	 * gibt der Methode countinnerNodes als parameter root, die Wurzel des Binärbaums
-	 * und sorgt dafür dass die Wurzel nicht als innerer Knoten mitgezählt wird
-	 * @return Anzahl der inneren Knoten des Binärbaums
+	 * gibt der Methode countinnerNodes als parameter root, die Wurzel des BinÃ¤rbaums
+	 * und sorgt dafÃ¼r dass die Wurzel nicht als innerer Knoten mitgezÃ¤hlt wird
+	 * @return Anzahl der inneren Knoten des BinÃ¤rbaums
 	 */
 	public int countInnerNodes()
 	{
@@ -39,10 +39,10 @@ public class BinTree
 	}
 	
 	/**
-	 * rekursive Methode die einen counter um 1 erhöht, wenn k ein innerer Knoten ist
-	 * ruft sich selbst erneut auf für die Nachfolger von k
-	 * @param k - Knoten des Binärbaums
-	 * @return Anzahl der inneren Knoten von k abwärts
+	 * rekursive Methode die einen counter um 1 erhÃ¶ht, wenn k ein innerer Knoten ist
+	 * ruft sich selbst erneut auf fÃ¼r die Nachfolger von k
+	 * @param k - Knoten des BinÃ¤rbaums
+	 * @return Anzahl der inneren Knoten von k abwÃ¤rts
 	 */
 	public int countInnerNodes(BinNode k)
 	{
@@ -57,7 +57,7 @@ public class BinTree
 	
 	/**
 	 * ruft die Methode isSorted mit dem Parameter root auf
-	 * @return true, wenn der Binärbaum sortiert ist
+	 * @return true, wenn der BinÃ¤rbaum sortiert ist
 	 */
 	public boolean isSorted()
 	{
@@ -65,10 +65,10 @@ public class BinTree
 	}
 	
 	/**
-	 * überprüft ob die Nachfolger von k sortiert sind und ruft die selbe Methode für die Nachfolger auf
+	 * Ã¼berprÃ¼ft ob die Nachfolger von k sortiert sind und ruft die selbe Methode fÃ¼r die Nachfolger auf
 	 * gibt Fehlermeldung aus wenn der selbe Wert mehr als einmal vorkommt
-	 * @param k - Knoten des Binärbaums
-	 * @return true, wenn der Binärbaum von k an abwärts sortiert ist
+	 * @param k - Knoten des BinÃ¤rbaums
+	 * @return true, wenn der BinÃ¤rbaum von k an abwÃ¤rts sortiert ist
 	 */
 	public boolean isSorted(BinNode k)
 	{
@@ -80,7 +80,7 @@ public class BinTree
 					return false;
 				else if(k.left.data == k.data)
 				{
-					System.out.println("Binärbaum beinhaltet mehr als einmal den selben Wert");
+					System.out.println("BinÃ¤rbaum beinhaltet mehr als einmal den selben Wert");
 					return false;
 				}
 			}
@@ -90,7 +90,7 @@ public class BinTree
 					return false;
 				else if(k.right.data == k.data)
 				{
-					System.out.println("Binärbaum beinhaltet mehr als einmal den selben Wert");
+					System.out.println("BinÃ¤rbaum beinhaltet mehr als einmal den selben Wert");
 					return false;
 				}
 			}
@@ -99,10 +99,10 @@ public class BinTree
 	}
 
 	/**
-	 * sucht den Knoten mit dem Wert i und löscht diesen
+	 * sucht den Knoten mit dem Wert i und lÃ¶scht diesen
 	 * beginnt die Suche an der Wurzel
-	 * sorgt dafür das der Binärbaum danach immernoch geordnet ist
-	 * @param i - der Knoten mit diesem Wert wird gelöscht
+	 * sorgt dafÃ¼r das der BinÃ¤rbaum danach immernoch geordnet ist
+	 * @param i - der Knoten mit diesem Wert wird gelÃ¶scht
 	 */
 	public void removeNode(int i)
 	{
@@ -110,21 +110,21 @@ public class BinTree
 	}
 	
 	/**
-	 * löscht die Wurzel des Binärbaums und wahrt dabei die Ordnung
+	 * lÃ¶scht die Wurzel des BinÃ¤rbaums und wahrt dabei die Ordnung
 	 */
 	public void removeNode()
 	{
 		if(root!=null)
-			removeNode(root, root.data);
+			root=null;
 		else
-			System.out.println("der Binärbaum ist null");
+			System.out.println("der BinÃ¤rbaum ist bereits null");
 	}
 	
 	/**
-	 * sucht den Knoten mit dem Wert i und löscht diesen
-	 * sorgt dafür das der Binärbaum danach immernoch geordnet ist
-	 * @param k - vergleicht ob k den gesuchten Wert i hat, wenn ja wird er gelöscht, wenn nein wird die Methode für die Nachfolger von k aufgerufen
-	 * @param i - der Knoten mit diesem Wert wird gelöscht
+	 * sucht den Knoten mit dem Wert i und lÃ¶scht diesen
+	 * sorgt dafÃ¼r das der BinÃ¤rbaum danach immernoch geordnet ist
+	 * @param k - vergleicht ob k den gesuchten Wert i hat, wenn ja wird er gelÃ¶scht, wenn nein wird die Methode fÃ¼r die Nachfolger von k aufgerufen
+	 * @param i - der Knoten mit diesem Wert wird gelÃ¶scht
 	 */
 	public void removeNode(BinNode k, int i)
 	{
@@ -155,10 +155,10 @@ public class BinTree
 	}
 
 	/**
-	 * wenn removeNode() versucht ein Node zu löschen, dass 2 Kinder hat, dann wird diese Methode aufgerufen sodass die Ordnung gewahrt wird
-	 * removeLeft() versucht den zu löschenden Knoten mit dem kleineren In-Order-Nachbar zu ersetzen 
-	 * @param k - Der Knoten bei dem Überprüft wird ob er der kleinere In-Order-Nachbar ist
-	 * @return der In-Order-Nachbar, der den durch removeNode() zu löschenden Knoten ersetzen soll
+	 * wenn removeNode() versucht ein Node zu lÃ¶schen, dass 2 Kinder hat, dann wird diese Methode aufgerufen sodass die Ordnung gewahrt wird
+	 * removeLeft() versucht den zu lÃ¶schenden Knoten mit dem kleineren In-Order-Nachbar zu ersetzen 
+	 * @param k - Der Knoten bei dem ÃœberprÃ¼ft wird ob er der kleinere In-Order-Nachbar ist
+	 * @return der In-Order-Nachbar, der den durch removeNode() zu lÃ¶schenden Knoten ersetzen soll
 	 */
 	public BinNode removeLeft(BinNode k)
 	{
@@ -184,39 +184,29 @@ public class BinTree
 		}
 	}
 	
-	public String toString()
+	public boolean equals(BinTree tree)
 	{
-		String string = toString(root);
-		if(string.equals(""))
-			return "(null)";
-		else
-			return string;
-		
+		return equals(this.root, tree.root);
 	}
 	
-	public String toString(BinNode k)
+	public boolean equals(BinNode k, BinNode m)
 	{
-		//if(k!=null)
-			//return "("+getTreeString(k.left)+")"+k.data+"("+getTreeString(k.right)+")";
-		//else
-			//return "~";
-		
-	    // Ausdrucken des Teilbaums ab b, Reihenfolge inorder
-	    String s = "";
-	    if(k!=null)
-	    {
-	    	if (k.left != null) 
-	    	{
-	    		s += "("+toString(k.left)+")";
-	    	}
-	    	s += k.data;
-	    	if (k.right != null) 
-	    	{
-	    		s += "("+toString(k.right)+")";
-	    	}
-	    }
-	    
-	    return s;
+		if(k != null && m != null)
+		{
+			if(k.data == m.data)
+			{
+				if(equals(k.left, m.left) && equals(k.right, m.right))
+					return true;
+				else
+					return false;
+			}
+			else
+				return false;
+		}
+		else if(k == null && m != null || k != null && m == null)
+			return false;
+		else
+			return true;
 	}
 
 }

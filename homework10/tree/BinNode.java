@@ -11,7 +11,7 @@ public class BinNode {
 		left = right = null;
 	}
 	
-	//zus‰tzlich, um Knoten direkt zu erzeugen:
+	//zus√§tzlich, um Knoten direkt zu erzeugen:
 	BinNode(int d, BinNode l, BinNode r) 
 	{
 		data = d; left = l; right = r;
