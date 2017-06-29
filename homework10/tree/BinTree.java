@@ -186,7 +186,12 @@ public class BinTree
 	
 	public String toString()
 	{
-		return toString(root);
+		String string = toString(root);
+		if(string.equals(""))
+			return "(null)";
+		else
+			return string;
+		
 	}
 	
 	public String toString(BinNode k)
@@ -198,15 +203,17 @@ public class BinTree
 		
 	    // Ausdrucken des Teilbaums ab b, Reihenfolge inorder
 	    String s = "";
-	    
-	    if (k.left != null) 
+	    if(k!=null)
 	    {
-	      s += "("+toString(k.left)+")";
-	    }
-	    s += k.data;
-	    if (k.right != null) 
-	    {
-	      s += "("+toString(k.right)+")";
+	    	if (k.left != null) 
+	    	{
+	    		s += "("+toString(k.left)+")";
+	    	}
+	    	s += k.data;
+	    	if (k.right != null) 
+	    	{
+	    		s += "("+toString(k.right)+")";
+	    	}
 	    }
 	    
 	    return s;

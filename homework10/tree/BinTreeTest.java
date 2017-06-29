@@ -101,6 +101,9 @@ public class BinTreeTest {
 	{
 		BinTree tree = new BinTree();
 		BinTree real = new BinTree();
+		
+		System.out.println(tree+"\n"+real);
+		
 		tree.removeNode();
 		assertEquals(real, tree);
 	}
@@ -131,7 +134,7 @@ public class BinTreeTest {
 		BinNode a2 = new BinNode(1);
 		BinNode c2 = new BinNode(2, a2, null);
 		BinNode d2 = new BinNode(5);
-		BinNode e2 = new BinNode(3, c, d);
+		BinNode e2 = new BinNode(3, c2, d2);
 		BinNode f2 = new BinNode(8);
 		BinNode g2 = new BinNode(9, f2, null);
 		BinNode root2 = new BinNode(7, e2, g2);
@@ -141,8 +144,7 @@ public class BinTreeTest {
 		
 		//System.out.println(tree);
 		System.out.println(real);
-		BinTree test = tree;
-		assertEquals(test, tree);
+		assertEquals(real, tree);
 	}
 
 }
