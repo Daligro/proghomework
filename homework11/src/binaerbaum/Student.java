@@ -23,9 +23,11 @@ public class Student implements Comparable<Student>{
 	}
 
 	/**
-	 * @return -1 - wenn aufrufer < parameter
-	 * 			1 - wenn aufrufer > parameter
-	 * 			0 - darf nicht kommen ( wenn gleichgroﬂ)
+	 * Methode vergleicht die Nachnamen Strings lexikalisch
+	 * @param o - der mit dem aufrufenden Studenten zu vergleichende Student
+	 * @return (-1) - wenn aufrufer < parameter<br>
+	 * 			1 - wenn aufrufer > parameter<br>
+	 * 			0 - wenn aufrufer == parameter
 	 */
 	@Override
 	public int compareTo(Student o) 
