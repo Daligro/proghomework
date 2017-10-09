@@ -1,0 +1,26 @@
+1.
+Klasse: Werkzeug der Objektorientierung, beinhaltet Eigenschaften und Methoden eines Objekts.
+Beispiel klasse Würfel: enthält Attribut: Seitenlänge und Methoden zur Berechnung von Volumen und Flächeninhalt
+
+Vererbung: Weitergabe von Methoden und Eigenschaften der vererbenden Klasse an erbende Klassen und 		   ihre Kinder
+Beispiel 
+
+Attribut: Eigenschaften bzw variable eines Objekts
+
+Operation: vordefinierte Methoden wie z.b. read() oder 1+1 oder i++
+
+Methode: Funktion eines Objekts oder Klasse zum verkürzen des Quelltexts
+
+Exemplar: Ist ein einfacher Wert oder ein Objekt und wird einem Datentyp zugewiesen
+
+Objekt:  Eine Instanz einer Klasse, hat zugewiesene Eigenschaften und Methoden
+
+Bibliothek: Sammlung von Klassen die bei der kreation von Programmen helfen
+
+Spezifikation: Hilft dem Nutzer beim Verständnis zur Nutzung des Programms
+
+Implementierung: der Quelltext eines Programms
+
+Verifikation: überprüfung ob das Programm den Anforderungen entspricht
+
+Geheimnisprinzip: Prinzip das besagt, dass zum Nutzen einer Funktion nicht die implementierung bekannt sein muss um diese zu nutzen sondern nur ein schlüsselwort.
