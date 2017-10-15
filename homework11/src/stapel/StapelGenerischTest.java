@@ -1,3 +1,6 @@
+/**
+ * @author David Linke s0558521
+ */
 package stapel;
 
 public class StapelGenerischTest 

@@ -1,3 +1,6 @@
+/**
+ * @author David Linke s0558521
+ */
 package binaerbaum;
 
 public class BinNode <T> {
