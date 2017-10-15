@@ -1,0 +1,17 @@
+1-1.1
+um so höher die Qualität oder der Umfang werden soll, desto höher kann der Zeitaufwand bzw die Kosten werden
+
+Die Ziele hängen direkt miteinander zusammen, wenn man versucht eines dieser zu optimieren dann beeinflusst man evtl ein anderes negativ.
+
+1-1.2
+hohe Qualität: Flugzeug Software -> Software Absturz sorgt für Flugzeug Absturz.(große Verantwortung im allgemeinen)
+
+niedrige Kosten, geringe Zeit: Treiber, brauchen oft aktualisierungen, müssen sich schnell anpassen, kein großer umfang
+
+großer Umfang: Betriebssystem -> viele Funktionen/Anwendungsmöglichkeiten, nicht sehr Absturzsicher(nicht die höchste Qualität(kann kompensiert werden durch zusätzliche Programme))
+
+1-1.3
+In der Regel ist der Zeitaufwand zu den Kosten Proportional, da die Softwareentwickler nach Zeit bezahlt werden. Außerdem kosten gemietete Server auch nach Zeit
+
+1-1.4
+das Verhältnis zwischen Zeitaufwand und Arbeitskräfte könnte man durch eine logarithmische Kurve beschreiben, d.h. ab einer gewissen Entwickleranzahl kostet die Zusammenarbeit mehr Zeit als sie einspart (zu viele Köche verderben den Brei)
