@@ -3,15 +3,19 @@ Klasse: Werkzeug der Objektorientierung, beinhaltet Eigenschaften und Methoden e
 Beispiel klasse Würfel: enthält Attribut: Seitenlänge und Methoden zur Berechnung von Volumen und Flächeninhalt
 
 Vererbung: Weitergabe von Methoden und Eigenschaften der vererbenden Klasse an erbende Klassen und 		   ihre Kinder
-Beispiel 
+Beispiel klasse Girokonto erbt von Konto und kriegt dabei einzelne eigenschaften zusätzlich dazu
 
 Attribut: Eigenschaften bzw variable eines Objekts
+Beispiel die Klasse Würfel hat das Attribut Seitenlänge
 
-Operation: vordefinierte Methoden wie z.b. read() oder 1+1 oder i++
+Operation: vordefinierte Methoden wie z.b. 1+1 oder i++
+
 
 Methode: Funktion eines Objekts oder Klasse zum verkürzen des Quelltexts
+Methode setName() weist dem Attribut name etwas zu
 
-Exemplar: Ist ein einfacher Wert oder ein Objekt und wird einem Datentyp zugewiesen
+Exemplar: Ist ein einfacher Wert oder eine Instanz eines Objekts und wird einem Datentyp zugewiesen
+eine Instanz eines Würfels mit konkreter Seitenlänge
 
 Objekt:  Eine Instanz einer Klasse, hat zugewiesene Eigenschaften und Methoden
 
@@ -19,7 +23,7 @@ Bibliothek: Sammlung von Klassen die bei der kreation von Programmen helfen
 
 Spezifikation: Hilft dem Nutzer beim Verständnis zur Nutzung des Programms
 
-Implementierung: der Quelltext eines Programms
+Implementierung: konkrete Umsetzung der Lösugn eines Problemx/der Quelltext eines Programms
 
 Verifikation: überprüfung ob das Programm den Anforderungen entspricht
 
